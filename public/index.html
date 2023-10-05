@@ -1,89 +1,320 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en-GB">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Kilkenny Kickers - Football Club</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Kilkenny kickers bootstrap</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="app-header navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container">
+        <div class="row align-items-center justify-content-between" style="width: 100%">
+            <a class="col-sm-12 col-md-auto navbar-brand text-center" href="index.html">
+                <span class="app-header__title">Kilkenny Kickers</span>
+                <span class="app-header__slogan">Football Club</span>
+            </a>
+            <nav class="col-sm-12 col-md-auto main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0 align-items-center justify-content-center justify-content-md-end">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/player64/kilkenny-kickers-bootstrap"
+                           rel="nofollow" target="_blank" class="nav-link">
+                            <img src="assets/icons/github.svg" alt="GitHub" class="main-nav__item-ico">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</header>
+<main class="app-main">
+    <section class="intro">
+        <img src="assets/images/main-img-resized.jpeg" width="1918" height="896" alt="Kilkenny Kickers"
+             class="intro__img">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+            <div class="intro__inner">
+                <div class="container">
+                    <h2 class="intro__title">Dublin Pushers tickets available</h2>
+                    <p class="intro__desc">Don't miss the opportunity to have a great time.</p>
+                    <a href="#" class="app-btn">Buy now</a>
+                </div>
+            </div>
+
+
+
+    </section>
+
+    <section class="app-section results">
+        <div class="app-container">
+            <h2 class="section-title results__title">Recent Results</h2>
+            <div class="app-row">
+                <div class="app-col">
+                    <article class="result">
+                        <table class="result__table">
+                            <tr>
+                                <th class="result__title">Limerick Strikers</th>
+                                <th class="result__title">-</th>
+                                <th class="result__title result__team">Kilkenny Kickers</th>
+                            </tr>
+                            <tr>
+                                <th class="result__title">3</th>
+                                <th class="result__title">:</th>
+                                <th class="result__title result__team">2</th>
+                            </tr>
+                            <tr>
+                                <td class="result__desc">
+                                    David Smith (15')<br>
+                                    Seamus Johnson (28')<br>
+                                    Michael Anderson (81')
+                                </td>
+                                <td></td>
+                                <td class="result__desc result__team">
+                                    Richard Roberts (5')<br>
+                                    James Miller (72')
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </div>
+                <div class="app-col">
+                    <article class="result">
+                        <table class="result__table">
+                            <tr>
+                                <th class="result__title result__team">Kilkenny Kickers</th>
+                                <th class="result__title">-</th>
+                                <th class="result__title">Aces Donegal</th>
+                            </tr>
+                            <tr>
+                                <th class="result__title result__team">2</th>
+                                <th class="result__title">:</th>
+                                <th class="result__title">0</th>
+                            </tr>
+                            <tr>
+                                <td class="result__desc result__team">
+                                    Robert White (19')<br>
+                                    Richard Roberts (66')
+                                </td>
+                                <td></td>
+                                <td class="result__desc"></td>
+                            </tr>
+                        </table>
+                    </article>
+
+                </div>
+                <div class="app-col">
+                    <article class="result">
+                        <table class="result__table">
+                            <tr>
+                                <th class="result__title">Cork Fireballs</th>
+                                <th class="result__title">-</th>
+                                <th class="result__title result__team">Kilkenny Kickers</th>
+                            </tr>
+                            <tr>
+                                <th class="result__title">1</th>
+                                <th class="result__title">:</th>
+                                <th class="result__title result__team">1</th>
+                            </tr>
+                            <tr>
+                                <td class="result__desc">
+                                    John Davis (61')
+                                </td>
+                                <td></td>
+                                <td class="result__desc result__team">
+                                    Liam Wilson (75')
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section news">
+        <div class="app-container">
+            <h2 class="section-title news__title">Recent News</h2>
+            <div class="app-row">
+                <div class="app-col">
+                    <article class="article">
+                        <figure class="article__img-wrapper">
+                            <img src="assets/images/news-1.jpeg" width="650" height="400"
+                                 alt="Kilkenny Kickers FC Launches Youth Development Program">
+                        </figure>
+                        <div class="article__inner">
+                            <h3 class="article__title">Kilkenny Kickers FC Launches Youth Development Program</h3>
+                            <p class="article__desc">Kilkenny Kickers Football Club has taken a significant step towards
+                                nurturing young football talent with the launch of their Youth Development Program.
+                                The program aims to identify and train promising young players from the local community,
+                                providing them access to top-notch coaching and facilities. This initiative reflects
+                                the club's commitment to fostering the next generation of football stars in
+                                Kilkenny.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="app-col">
+                    <article class="article">
+                        <figure class="article__img-wrapper">
+                            <img src="assets/images/news-2.jpeg" width="650" height="400"
+                                 alt="Kilkenny Kickers FC Wins Regional Championship">
+                        </figure>
+                        <div class="article__inner">
+                            <h3 class="article__title">Kilkenny Kickers FC Wins Regional Championship</h3>
+                            <p class="article__desc">Kilkenny Kickers Football Club celebrated a historic victory
+                                by clinching the Regional Championship title in a thrilling final match. The team's
+                                exceptional performance throughout the tournament showcased their dedication and skill
+                                on the field. Fans and club members are rejoicing in this well-deserved triumph, and
+                                hopes are high as they prepare for upcoming national competitions.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="app-col">
+                    <article class="article">
+                        <figure class="article__img-wrapper">
+                            <img src="assets/images/news-3.jpeg" width="650" height="450"
+                                 alt="Kilkenny Kickers FC Launches Community Outreach Program">
+                        </figure>
+                        <div class="article__inner">
+                            <h3 class="article__title">Kilkenny Kickers FC Launches Community Outreach Program</h3>
+                            <p class="article__desc">Kilkenny Kickers Football Club has unveiled a new Community
+                                Outreach
+                                Program to strengthen its ties with the local community. This initiative includes
+                                various
+                                projects to give back to the community, such as football clinics for underprivileged
+                                youth and partnerships with local schools. The club believes in using the power of
+                                football to promote unity and positive change within Kilkenny.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="app-section about">
+        <div class="app-container">
+            <h2 class="section-title about__title">Club Management</h2>
+            <p class="about__desc">
+                These dedicated individuals, Sarah O'Donnell, James Murphy, and Emma Fitzgerald, work tirelessly behind
+                the scenes to ensure the success and growth of Kilkenny Kickers Football Club, both on and off the
+                pitch.
+            </p>
+
+            <div class="app-row about__row">
+                <div class="app-col">
+                    <article class="person">
+                        <figure class="person__img-wrapper">
+                            <img src="assets/images/chairperson.jpg" width="300" height="286"
+                                 class="person__img" alt="Sarah O'Donnell">
+                        </figure>
+                        <div class="person__inner">
+                            <h3 class="person__name">Sarah O'Donnell</h3>
+                            <h5 class="person__position">Chairperson</h5>
+                            <p class="person__bio">Sarah O'Donnell is the driving force behind Kilkenny Kickers Football
+                                Club. With an unwavering passion for the beautiful game, she took on the role of
+                                Chairperson to lead the club to new heights. Sarah brings a wealth of experience,
+                                having played football competitively for over a decade before transitioning to
+                                leadership.
+                                <br><br>
+
+                                Off the field, Sarah is a dedicated advocate for youth development in sports. She firmly
+                                believes that football is more than just a game; it's a tool for personal growth and
+                                community building. Under her guidance, the Kilkenny Kickers Football Club has become
+                                a place where aspiring players sharpen their skills and learn valuable life lessons.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="app-col">
+                    <article class="person">
+                        <figure class="person__img-wrapper">
+                            <img src="assets/images/secretary.jpg" width="300" height="283"
+                                 class="person__img" alt="James Murphy">
+                        </figure>
+                        <div class="person__inner">
+                            <h3 class="person__name">James Murphy</h3>
+                            <h5 class="person__position">Secretary</h5>
+                            <p class="person__bio">James Murphy serves as the Secretary of the Kilkenny Kickers Football
+                                Club. With a keen eye for detail and excellent organizational skills, he runs the club's
+                                administrative matters like clockwork. James has been a dedicated club member for years,
+                                and his transition into a leadership role was a natural progression.
+                                <br><br>
+                                In addition to his role as Secretary, James is a passionate football enthusiast. He's
+                                often seen on stadiums, cheering on the teams and fostering a sense of camaraderie among
+                                the club's members. His commitment to the club's success, both on and off the pitch,
+                                is commendable.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="app-col">
+                    <article class="person">
+                        <figure class="person__img-wrapper">
+                            <img src="assets/images/treasurer.jpg" width="300" height="286"
+                                 class="person__img" alt="James Murphy">
+                        </figure>
+                        <div class="person__inner">
+                            <h3 class="person__name">Emma Fitzgerald</h3>
+                            <h5 class="person__position">Treasurer</h5>
+                            <p class="person__bio">Emma Fitzgerald is the Treasurer of Kilkenny Kickers Football Club
+                                and is responsible for managing the club's finances with precision and diligence. She
+                                brings a solid financial background to the role, having worked in finance for several
+                                years before joining the club's leadership team.
+                                <br><br>
+                                Emma's dedication to the club's financial stability ensures that resources are allocated
+                                efficiently, helping the club invest in better facilities, equipment, and coaching
+                                staff.
+                                Her meticulous financial planning has played a pivotal role in the club's ability to
+                                grow
+                                and provide opportunities for aspiring footballers in the Kilkenny community.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="app-footer">
+    <div class="app-container">
+        <nav class="social-nav">
+            <p class="social-nav__desc">Follow us on</p>
+            <ul class="social-nav__list">
+                <li class="social-nav__list-item">
+                    <a href="https://github.com/player64/kilkenny-kickers"
+                       rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/github.svg" alt="GitHub" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://linkedin.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://twitter.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/twitter.svg" alt="LinkedIn" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://facebook.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/facebook.svg" alt="Facebook" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://reddit.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/reddit.svg" alt="Reddit" class="social-nav__ico">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
 </html>

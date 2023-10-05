@@ -1,0 +1,53 @@
+@import "style.css";
+
+.about-the-project {
+    padding: 3rem 0;
+}
+
+.about-the-project strong {
+    font-weight: bold;
+}
+
+.about-the-project__body {
+    max-width: 70%;
+}
+
+.about-the-project__section {
+    margin-bottom: 2rem;
+}
+
+.about-the-project__section-title {
+    color: var(--paynes-gray);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-the-project__section-desc,
+.about-the-project__list-item {
+    line-height: 1.4rem;
+}
+
+.about-the-project__list {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+.about-the-project__list-item {
+    margin-bottom: 0.6rem;
+}
+
+.credit-desc {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.credit-link {
+    color: var(--dark-amber);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.credit-link:hover {
+    text-decoration: underline;
+}
