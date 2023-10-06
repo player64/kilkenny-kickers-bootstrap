@@ -17,9 +17,17 @@ body {
     margin-bottom: 3rem;
 }
 
+.app-section {
+    padding: 3rem 0;
+}
+
 /** APP HEADER **/
 .app-header {
     background-color: var(--paynes-gray);
+}
+
+.app-header__row {
+    width: 100%;
 }
 
 .app-header__title {
@@ -79,7 +87,19 @@ body {
 }
 
 .intro__img--min-height {
-    max-height: 300px;
+    min-height: 200px;
+
+    @media (min-width: 768px) {
+        max-height: 300px;
+    }
+}
+
+.intro__img--not-found {
+    min-height: 600px;
+
+    @media (min-width: 768px) {
+        max-height: 400px;
+    }
 }
 
 .intro__inner {

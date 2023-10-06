@@ -4,28 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About | Kilkenny Kickers - Football Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
 <body>
 
-<header class="app-header">
-    <div class="app-container">
-        <div class="app-header__row">
-            <a class="app-header__branding" href="index.html">
+<header class="app-header navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container">
+        <div class="app-header__row row align-items-center justify-content-between">
+            <a class="col-sm-12 col-md-auto navbar-brand text-center" href="index.html">
                 <span class="app-header__title">Kilkenny Kickers</span>
                 <span class="app-header__slogan">Football Club</span>
             </a>
-            <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__list-item">
-                        <a href="index.html" class="main-nav__link">Home</a>
+            <nav class="col-sm-12 col-md-auto mt-1 mt-md-0 main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0 align-items-center justify-content-center">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
-                    <li class="main-nav__list-item">
-                        <a href="about.html" class="main-nav__link main-nav__link--active">About</a>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">About</a>
                     </li>
-                    <li class="main-nav__list-item">
-                        <a href="https://github.com/player64/kilkenny-kickers"
-                           rel="nofollow" target="_blank" class="main-nav__link">
+                    <li class="nav-item">
+                        <a href="https://github.com/player64/kilkenny-kickers-bootstrap"
+                           rel="nofollow" target="_blank" class="nav-link">
                             <img src="assets/icons/github.svg" alt="GitHub" class="main-nav__item-ico">
                         </a>
                     </li>
@@ -36,96 +38,108 @@
 </header>
 <main class="app-main">
     <section class="intro">
-        <img src="assets/images/main-img-resized.jpeg"  width="1918" height="896"
+        <img src="assets/images/main-img-resized.jpeg" width="1918" height="896"
              alt="Kilkenny Kickers" class="intro__img intro__img--min-height">
         <div class="intro__inner">
-            <div class="app-container">
+            <div class="container">
                 <h2 class="intro__title">About the project</h2>
             </div>
         </div>
     </section>
 
     <section class="about-the-project">
-        <div class="app-container">
-            <div class="about-the-project__body">
-                <div class="about-the-project__section">
-                    <h2 class="about-the-project__section-title">Overview:</h2>
-                    <p class="about-the-project__section-desc">
-                        Welcome to the Kilkenny Kickers Football Club website – your gateway to the world of our beloved
-                        fictional football team, the Kilkenny Kickers! <strong>This project is a fictional</strong>
-                        endeavour created for educational purposes, showcasing a website built using static HTML and
-                        pure CSS, with hosting provided by Firebase.
-                    </p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="about-the-project__section">
+                        <h2 class="about-the-project__section-title">Overview:</h2>
+                        <p class="about-the-project__section-desc">
+                            Welcome to the Kilkenny Kickers Football Club website – your gateway to the world of our
+                            beloved
+                            fictional football team, the Kilkenny Kickers! <strong>This project is a fictional</strong>
+                            endeavour created for educational purposes, showcasing a website built using static HTML and
+                            pure CSS, with hosting provided by Firebase.
+                        </p>
+                    </div>
 
-                <div class="about-the-project__section">
-                    <h2 class="about-the-project__section-title">Technical Details:</h2>
-                    <ul class="about-the-project__list">
-                        <li class="about-the-project__list-item">The website is developed and tested for desktop use
-                            only, optimized for screens with a minimum width of 1200 pixels for the best viewing
-                            experience.
-                        </li>
-                        <li class="about-the-project__list-item">
-                            The website is built using static HTML and CSS for a clean design.
-                        </li>
-                        <li class="about-the-project__list-item">
-                            Firebase hosts the website, ensuring fast and reliable access for visitors.
-                        </li>
-                        <li class="about-the-project__list-item">
-                            The source code is available on
-                            <a class="credit-link" target="_blank" rel="nofollow"
-                               href="https://github.com/player64/kilkenny-kickers/">
-                                GitHub
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="about-the-project__section">
+                        <h2 class="about-the-project__section-title">Technical Details:</h2>
+                        <ul class="about-the-project__list">
+                            <li class="about-the-project__list-item">The website is fully responsive and tested on
+                                different screen sizes.
+                            </li>
+                            <li class="about-the-project__list-item">
+                                The website is built using static HTML and CSS for a clean design.
+                            </li>
+                            <li class="about-the-project__list-item">
+                                <a class="credit-link" target="_blank" rel="nofollow"
+                                   href="https://getbootstrap.com/">Bootstrap</a> was used to style the website.
+                            </li>
+                            <li class="about-the-project__list-item">
+                                <a href="https://firebase.google.com/" class="credit-link" target="_blank"
+                                   rel="nofollow">
+                                    Firebase</a> hosts the website, ensuring fast and reliable access for visitors.
+                            </li>
+                            <li class="about-the-project__list-item">
+                                GitHub's actions are used to deploy the project to Firebase.
+                            </li>
+                            <li class="about-the-project__list-item">
+                                The source code is available on
+                                <a class="credit-link" target="_blank" rel="nofollow"
+                                   href="https://github.com/player64/kilkenny-kickers/">
+                                    GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="about-the-project__section">
-                    <h2 class="about-the-project__section-title">Disclaimer:</h2>
-                    <p class="about-the-project__section-desc">
-                        <strong>This project is entirely fictional</strong> and is not affiliated with any real football
-                        club. It is
-                        created solely for educational purposes to demonstrate web development skills and
-                        <strong>
-                            does not represent any real team, organization, or entity.
-                        </strong>
-                    </p>
-                </div>
+                    <div class="about-the-project__section">
+                        <h2 class="about-the-project__section-title">Disclaimer:</h2>
+                        <p class="about-the-project__section-desc">
+                            <strong>This project is entirely fictional</strong> and is not affiliated with any real
+                            football
+                            club. It is
+                            created solely for educational purposes to demonstrate web development skills and
+                            <strong>
+                                does not represent any real team, organization, or entity.
+                            </strong>
+                        </p>
+                    </div>
 
-                <div class="about-the-project__section">
-                    <h2 class="about-the-project__section-title">Credits:</h2>
-                    <ul class="about-the-project__list">
-                        <li class="about-the-project__list-item">
-                            <span class="credit-desc">Images:</span>
-                            <ul class="about-the-project__list">
-                                <li class="about-the-project__list-item">
-                                    <a class="credit-link" href="https://www.pexels.com/" target="_blank"
-                                       rel="nofollow">
-                                        Pexels
-                                    </a>
-                                </li>
-                                <li class="about-the-project__list-item">
-                                    <a class="credit-link" href="https://this-person-does-not-exist.com/en"
-                                       target="_blank" rel="nofollow">
-                                        Random Face Generator (This Person Does Not Exist)
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="about-the-project__list-item">
-                            <span class="credit-desc">Icons:</span>
-                            <a class="credit-link" href="https://remixicon.com/" target="_blank" rel="nofollow">
-                                Remix Icon
-                            </a>
-                        </li>
-                        <li class="about-the-project__list-item">
-                            <span class="credit-desc">Colour pallet:</span>
-                            <a class="credit-link" href="https://coolors.co/" target="_blank" rel="nofollow">
-                                Coolors
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="about-the-project__section">
+                        <h2 class="about-the-project__section-title">Credits:</h2>
+                        <ul class="about-the-project__list">
+                            <li class="about-the-project__list-item">
+                                <span class="credit-desc">Images:</span>
+                                <ul class="about-the-project__list">
+                                    <li class="about-the-project__list-item">
+                                        <a class="credit-link" href="https://www.pexels.com/" target="_blank"
+                                           rel="nofollow">
+                                            Pexels
+                                        </a>
+                                    </li>
+                                    <li class="about-the-project__list-item">
+                                        <a class="credit-link" href="https://this-person-does-not-exist.com/en"
+                                           target="_blank" rel="nofollow">
+                                            Random Face Generator (This Person Does Not Exist)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="about-the-project__list-item">
+                                <span class="credit-desc">Icons:</span>
+                                <a class="credit-link" href="https://remixicon.com/" target="_blank" rel="nofollow">
+                                    Remix Icon
+                                </a>
+                            </li>
+                            <li class="about-the-project__list-item">
+                                <span class="credit-desc">Colour pallet:</span>
+                                <a class="credit-link" href="https://coolors.co/" target="_blank" rel="nofollow">
+                                    Coolors
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,9 +150,9 @@
     <div class="app-container">
         <nav class="social-nav">
             <p class="social-nav__desc">Follow us on</p>
-            <ul class="social-nav__list">
+            <ul class="social-nav__list list-unstyled">
                 <li class="social-nav__list-item">
-                    <a href="https://github.com/player64/kilkenny-kickers"
+                    <a href="https://github.com/player64/kilkenny-kickers-bootstrap"
                        rel="nofollow" target="_blank" class="social-nav__link">
                         <img src="assets/icons/github.svg" alt="GitHub" class="social-nav__ico">
                     </a>
@@ -167,6 +181,5 @@
         </nav>
     </div>
 </footer>
-
 </body>
 </html>
